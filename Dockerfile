@@ -16,6 +16,6 @@ RUN apt-get -qq update && apt-get -qqy install \
 
 ENV CXX g++-5
 
-WORKDIR /home
+WORKDIR /workdir
 
 CMD /bin/bash
