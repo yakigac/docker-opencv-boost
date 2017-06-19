@@ -10,6 +10,22 @@ RUN apt-get -qqy install \
     libopencv-dev \
     libboost-all-dev
 
+RUN apt-get -qqy install python3-pip
+
+RUN pip3 --no-cache-dir install \
+        ipykernel \
+        jupyter \
+        matplotlib \
+        numpy \
+        scipy \
+        sklearn \
+        pandas \
+        Pillow
+
+COPY jupyter_notebook_config.py /root/.jupyter/
+
+EXPOSE 8888
+
 WORKDIR /workdir
 
 CMD /bin/bash
