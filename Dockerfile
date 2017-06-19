@@ -12,10 +12,11 @@ RUN apt-get -qq update && apt-get -qqy install \
     libopencv-dev \
     libboost-system1.55-dev \
     libboost-filesystem1.55-dev \
-    libboost-program-options1.55-dev
+    libboost-program-options1.55-dev \
+    libboost-python1.55-dev
 
 ENV CXX g++-5
 
-WORKDIR /home
+WORKDIR /workdir
 
 CMD /bin/bash
