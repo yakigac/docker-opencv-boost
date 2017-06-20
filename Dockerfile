@@ -20,7 +20,8 @@ RUN pip3 --no-cache-dir install \
         scipy \
         sklearn \
         pandas \
-        Pillow
+        Pillow \
+        tifffile
 
 COPY jupyter_notebook_config.py /root/.jupyter/
 
