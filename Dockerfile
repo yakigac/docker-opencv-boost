@@ -25,8 +25,11 @@ RUN pip3 --no-cache-dir install \
 
 COPY jupyter_notebook_config.py /root/.jupyter/
 
+COPY run_jupyter.sh /
+
+# Jupyter
 EXPOSE 8888
 
 WORKDIR /workdir
 
-CMD /bin/bash
+CMD ["/run_jupyter.sh", "--allow-root"]
