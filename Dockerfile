@@ -12,7 +12,7 @@ RUN apt-get -qqy install \
 
 RUN apt-get -qqy install python3-pip
 
-RUN pip3 --no-cache-dir install \
+RUN pip3 -q --no-cache-dir install \
         ipykernel \
         jupyter \
         matplotlib \
