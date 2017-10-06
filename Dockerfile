@@ -21,7 +21,8 @@ RUN pip3 -q --no-cache-dir install \
         sklearn \
         pandas \
         Pillow \
-        tifffile
+        tifffile \
+        opencv-python
 
 COPY jupyter_notebook_config.py /root/.jupyter/
 
